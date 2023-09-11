@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+
+/* font-family: 'Work Sans', sans-serif; */
+
+@mixin tamanio ($anchor, $altura) {
+    width: $anchor;
+    height: $altura;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+header {
+    height: 100px;
+    padding: 10px;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999; /* Asegurarse de que el header esté por encima de otros elementos */
+    text-transform: uppercase;
+    nav {
+        z-index: 1;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 20px;
+        font-weight: bolder;
+        .logo { 
+            cursor: pointer;
+            img {
+                @include tamanio(auto,85px);
+            }
+        }
+        ul {
+            list-style: none;
+            li {
+                display: inline-block;
+                padding: 0 5px;
+                &:hover {
+                    transform: scale(1.05);
+                }
+                a {
+                    font-size: 20px;
+                    text-decoration: none;
+                }
+            }
+        }
+        .categories {
+            li{
+                a{
+                    color: black;
+                }
+            }
+        }
+        .contact {
+            li{
+                a{
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+.home {
+    @include tamanio(100%,200vh);
+    .banner-1 {
+        background-image: url(assets/img/banner-1.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+        @include tamanio(100%,100vh);
+    }
+    .banner-2 {
+        @extend .banner-1;
+        background-image: url(assets/img/banner-2.jpg);
+    }
+}
+
+footer {
+    @include tamanio(100%,100vh);
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    .footer-contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 0 80px 0;
+        div {
+            padding: 50px 0 50px 0;
+        }
+        p {
+            cursor: pointer;
+        }
+        .social {
+            display: flex;
+            flex-direction: row;
+            p {
+                padding: 0 10px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.mujer {
+    @include tamanio(100%,600vh);
+    .banner-mujer {
+        background-image: url(assets/img/banner-mujer.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+        @include tamanio(100%,100vh);
+        margin-bottom: 70px;
+    }
+}
+
+.product-view1 {
+    margin-top: 10px;
+    @include tamanio(100%,100vh);
+    img{
+        @include tamanio(325px,475px)
+    }
+    p{
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+    .product-view1-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+.product-view2 {
+    margin-top: 10px;
+    @include tamanio(100%,100vh);
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+    p{
+        margin-left: 20px;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+}
+
+
+.hombre {
+    @include tamanio(100%,350vh);
+    margin-top: 150px;
+}
+
+.niños {
+    @include tamanio(100%,400vh);
+    .banner-niños {
+        background-image: url(assets/img/banner-niños.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+        @include tamanio(100%,100vh);
+        margin-bottom: 70px;
+    }
+}
+
+.banner-ayuda {
+    background-image: url(assets/img/banner-ayuda.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    @include tamanio(100%,100vh);
+}
+
+.ayuda {
+    @include tamanio(100%,150vh);
+    .help-view{
+        text-transform: uppercase;
+        @include tamanio(100%,100vh);
+        margin-top: 50px;
+        .help-tittle {
+            margin-left: 40px;
+            margin-top: 30px;
+            margin-bottom: 50px;
+            h2{
+                font-size: 20px;
+            }
+        }
+        .frequent-view {
+            margin-top: 40px;
+            margin-left: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+            flex-direction: row;
+            .frequent-box {
+                border: solid 1px black;
+                padding: 3px 3px 3px 3px;
+                margin-bottom: 40px;
+                cursor: pointer;
+            }
+        }
+        .help-topic {
+            margin-top: 40px;
+            margin-left: 40px;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            flex-direction: row;
+            .topic-box {
+                border: solid 1px black;
+                padding: 10px 10px 10px 10px;
+                height: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                h3 {
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+                .p{
+                    font-size: 15px;
+                    margin-bottom: 5px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+
+    .mujer {
+        height: 900vh;
+    }
+
+    .hombre {
+        height: 700vh;
+    }
+
+    .niños {
+        height: 800vh;
+    }
+
+    .ayuda {
+        height: 250vh;
+    }
+
+    .product-view1 {
+        margin-bottom: 150px;
+    }
+
+    .double{
+        height: 200vh;
+    }
+
+    .triple {
+        height: 300vh;
+    }
+
+    .unique {
+        height: 100vh;
+    }
+
+    .topic-box h3{
+        font-size: 15px;
+    }
+
+    .topic-box p {
+        font-size: 10px;
+    }
+
+    footer {
+        margin-top: 60px;
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 768px){
+
+    .mujer {
+        height: 750vh;
+    }
+
+    .hombre {
+        height: 500vh;
+    }
+
+    .niños {
+        height: 600vh;
+    }
+
+    .ayuda {
+        height: 250vh;
+    }
+
+    .product-view1{
+        margin-bottom: 150px;
+    }
+
+    .double{
+        height: 100vh;
+    }
+
+    .triple {
+        height: 200vh;
+    }
+
+    .unique {
+        height: 100vh;
+    }
+
+    .topic-box h3{
+        font-size: 17px;
+    }
+
+    .topic-box p {
+        font-size: 13px;
+    }
+
+    footer {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 992px){
+
+    .mujer {
+        height: 700vh;
+    }
+
+    .hombre {
+        height: 400vh;
+    }
+
+    .niños {
+        height: 500vh;
+    }
+
+    .ayuda {
+        height: 200vh;
+    }
+
+    .product-view1{
+        margin-bottom: 150px;
+    }
+
+    .double{
+        height: 100vh;
+    }
+
+    .triple {
+        height: 100vh;
+    }
+
+    .unique {
+        height: 100vh;
+    }
+
+    footer {
+        font-size: 15px;
+    }
+}

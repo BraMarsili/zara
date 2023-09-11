@@ -1,411 +1,347 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
-
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap");
 /* font-family: 'Work Sans', sans-serif; */
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Work Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
 }
 
 header {
-    height: 100px;
-    padding: 10px;
-    background-color: transparent;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999; /* Asegurarse de que el header esté por encima de otros elementos */
-    text-transform: uppercase;
+  height: 100px;
+  padding: 10px;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999; /* Asegurarse de que el header esté por encima de otros elementos */
+  text-transform: uppercase;
 }
-
-.logo { 
-    cursor: pointer;
+header nav {
+  z-index: 1;
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
 }
-
-.logo img {
-    height: 85px;
-    width: auto;
+header nav .logo {
+  cursor: pointer;
 }
-
-nav {
-    z-index: 1;
-    font-family: 'Work Sans', sans-serif;
-    font-size: 20px;
-    font-weight: bolder;
+header nav .logo img {
+  width: auto;
+  height: 85px;
 }
-
-nav ul {
-    list-style: none;
+header nav ul {
+  list-style: none;
 }
-
-nav ul li {
-    display: inline-block;
-    padding: 0 5px;
+header nav ul li {
+  display: inline-block;
+  padding: 0 5px;
 }
-
-nav ul li:hover {
-    transform: scale(1.05);
+header nav ul li:hover {
+  transform: scale(1.05);
 }
-
-nav ul li a {
-    font-size: 20px;
-    text-decoration: none;
+header nav ul li a {
+  font-size: 20px;
+  text-decoration: none;
 }
-.categories li a {
-    color: black;
+header nav .categories li a {
+  color: black;
 }
-
-.contact li a {
-    color: black;
+header nav .contact li a {
+  color: black;
 }
 
 .home {
-    width: 100%;
-    height: 200vh;
+  width: 100%;
+  height: 200vh;
 }
-
-.banner-1 {
-    background-image: url(assets/img/banner-1.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
+.home .banner-1, .home .banner-2 {
+  background-image: url(assets/img/banner-1.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
 }
-.banner-2 {
-    background-image: url(assets/img/banner-2.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
+.home .banner-2 {
+  background-image: url(assets/img/banner-2.jpg);
 }
 
 footer {
-    width: 100%;
-    height: 100vh;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-transform: uppercase;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-transform: uppercase;
 }
-
-.footer-contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 0 0 80px 0;
+footer .footer-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 0 80px 0;
 }
-
-.footer-contact div {
-    padding: 50px 0 50px 0;
+footer .footer-contact div {
+  padding: 50px 0 50px 0;
 }
-
-.footer-contact p {
-    cursor: pointer;
+footer .footer-contact p {
+  cursor: pointer;
 }
-
-.social {
-    display: flex;
-    flex-direction: row;
+footer .footer-contact .social {
+  display: flex;
+  flex-direction: row;
 }
-
-.social p {
-    padding: 0 10px;
-    cursor: pointer;
+footer .footer-contact .social p {
+  padding: 0 10px;
+  cursor: pointer;
 }
 
 .mujer {
-    width: 100%;
-    height: 600vh;
+  width: 100%;
+  height: 600vh;
 }
-
-.banner-mujer {
-    background-image: url(assets/img/banner-mujer.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    margin-bottom: 70px;
+.mujer .banner-mujer {
+  background-image: url(assets/img/banner-mujer.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 70px;
 }
 
 .product-view1 {
-    margin-top: 10px;
-    width: 100%;
-    height: 100vh;
+  margin-top: 10px;
+  width: 100%;
+  height: 100vh;
 }
-
-.product-view1 img{
-    width: 325px;
-    height: 475px;
+.product-view1 img {
+  width: 325px;
+  height: 475px;
 }
-
-.product-view1 p{
-    text-transform: uppercase;
-    font-size: 12px;
+.product-view1 p {
+  text-transform: uppercase;
+  font-size: 12px;
 }
-
-.product-view1-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
+.product-view1 .product-view1-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .product-view2 {
-    margin-top: 10px;
-    width: 100%;
-    height: 100vh;
+  margin-top: 10px;
+  width: 100%;
+  height: 100vh;
 }
-
-.product-view2 img{
-    max-width: 100%;
-    height: auto;
+.product-view2 img {
+  max-width: 100%;
+  height: auto;
 }
-
-.product-view2 p{
-    margin-left: 20px;
-    text-transform: uppercase;
-    font-size: 14px;
+.product-view2 p {
+  margin-left: 20px;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
 .hombre {
-    width: 100%;
-    height: 350vh;
-    margin-top: 150px;
+  width: 100%;
+  height: 350vh;
+  margin-top: 150px;
 }
 
 .niños {
-    width: 100%;
-    height: 400vh;
+  width: 100%;
+  height: 400vh;
 }
-
-.banner-niños {
-    background-image: url(assets/img/banner-niños.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    margin-bottom: 70px;
+.niños .banner-niños {
+  background-image: url(assets/img/banner-niños.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 70px;
 }
 
 .banner-ayuda {
-    background-image: url(assets/img/banner-ayuda.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-}
-
-.help-view{
-    text-transform: uppercase;
-    width: 100%;
-    height: 100vh;
-    margin-top: 50px;
-}
-
-.help-tittle {
-    margin-left: 40px;
-    margin-top: 30px;
-    margin-bottom: 50px;
-}
-
-.help-tittle h2{
-    font-size: 20px;
-}
-
-.frequent-view {
-    margin-top: 40px;
-    margin-left: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    align-items: center;
-    flex-direction: row;
-}
-
-.frequent-box {
-    border: solid 1px black;
-    padding: 3px 3px 3px 3px;
-    margin-bottom: 40px;
-    cursor: pointer;
-}
-
-.help-topic {
-    margin-top: 40px;
-    margin-left: 40px;
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    flex-direction: row;
-}
-
-.topic-box {
-    border: solid 1px black;
-    padding: 10px 10px 10px 10px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.topic-box h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.topic-box p{
-    font-size: 15px;
-    margin-bottom: 5px;
-    cursor: pointer;
+  background-image: url(assets/img/banner-ayuda.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
 }
 
 .ayuda {
-    width: 100%;
+  width: 100%;
+  height: 150vh;
+}
+.ayuda .help-view {
+  text-transform: uppercase;
+  width: 100%;
+  height: 100vh;
+  margin-top: 50px;
+}
+.ayuda .help-view .help-tittle {
+  margin-left: 40px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.ayuda .help-view .help-tittle h2 {
+  font-size: 20px;
+}
+.ayuda .help-view .frequent-view {
+  margin-top: 40px;
+  margin-left: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  flex-direction: row;
+}
+.ayuda .help-view .frequent-view .frequent-box {
+  border: solid 1px black;
+  padding: 3px 3px 3px 3px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+.ayuda .help-view .help-topic {
+  margin-top: 40px;
+  margin-left: 40px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-direction: row;
+}
+.ayuda .help-view .help-topic .topic-box {
+  border: solid 1px black;
+  padding: 10px 10px 10px 10px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.ayuda .help-view .help-topic .topic-box h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.ayuda .help-view .help-topic .topic-box .p {
+  font-size: 15px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .mujer {
+    height: 900vh;
+  }
+  .hombre {
+    height: 700vh;
+  }
+  .niños {
+    height: 800vh;
+  }
+  .ayuda {
+    height: 250vh;
+  }
+  .product-view1 {
+    margin-bottom: 150px;
+  }
+  .double {
     height: 200vh;
+  }
+  .triple {
+    height: 300vh;
+  }
+  .unique {
+    height: 100vh;
+  }
+  .topic-box h3 {
+    font-size: 15px;
+  }
+  .topic-box p {
+    font-size: 10px;
+  }
+  footer {
+    margin-top: 60px;
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .mujer {
+    height: 750vh;
+  }
+  .hombre {
+    height: 500vh;
+  }
+  .niños {
+    height: 600vh;
+  }
+  .ayuda {
+    height: 250vh;
+  }
+  .product-view1 {
+    margin-bottom: 150px;
+  }
+  .double {
+    height: 100vh;
+  }
+  .triple {
+    height: 200vh;
+  }
+  .unique {
+    height: 100vh;
+  }
+  .topic-box h3 {
+    font-size: 17px;
+  }
+  .topic-box p {
+    font-size: 13px;
+  }
+  footer {
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .mujer {
+    height: 700vh;
+  }
+  .hombre {
+    height: 400vh;
+  }
+  .niños {
+    height: 500vh;
+  }
+  .ayuda {
+    height: 200vh;
+  }
+  .product-view1 {
+    margin-bottom: 150px;
+  }
+  .double {
+    height: 100vh;
+  }
+  .triple {
+    height: 100vh;
+  }
+  .unique {
+    height: 100vh;
+  }
+  footer {
+    font-size: 15px;
+  }
 }
 
-@media only screen and (max-width: 600px){
-
-    .mujer {
-        height: 900vh;
-    }
-
-    .hombre {
-        height: 700vh;
-    }
-
-    .niños {
-        height: 800vh;
-    }
-
-    .ayuda {
-        height: 250vh;
-    }
-
-    .product-view1 {
-        margin-bottom: 150px;
-    }
-
-    .double{
-        height: 200vh;
-    }
-
-    .triple {
-        height: 300vh;
-    }
-
-    .unique {
-        height: 100vh;
-    }
-
-    .topic-box h3{
-        font-size: 15px;
-    }
-
-    .topic-box p {
-        font-size: 10px;
-    }
-
-    footer {
-        margin-top: 60px;
-        font-size: 15px;
-    }
-}
-
-@media only screen and (min-width: 768px){
-
-    .mujer {
-        height: 750vh;
-    }
-
-    .hombre {
-        height: 500vh;
-    }
-
-    .niños {
-        height: 600vh;
-    }
-
-    .ayuda {
-        height: 250vh;
-    }
-
-    .product-view1{
-        margin-bottom: 150px;
-    }
-
-    .double{
-        height: 100vh;
-    }
-
-    .triple {
-        height: 200vh;
-    }
-
-    .unique {
-        height: 100vh;
-    }
-
-    .topic-box h3{
-        font-size: 17px;
-    }
-
-    .topic-box p {
-        font-size: 13px;
-    }
-
-    footer {
-        font-size: 15px;
-    }
-}
-
-@media only screen and (min-width: 992px){
-
-    .mujer {
-        height: 700vh;
-    }
-
-    .hombre {
-        height: 400vh;
-    }
-
-    .niños {
-        height: 500vh;
-    }
-
-    .product-view1{
-        margin-bottom: 150px;
-    }
-
-    .double{
-        height: 100vh;
-    }
-
-    .triple {
-        height: 100vh;
-    }
-
-    .unique {
-        height: 100vh;
-    }
-
-    footer {
-        font-size: 15px;
-    }
-}
+/*# sourceMappingURL=style.css.map */
