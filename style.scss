@@ -224,22 +224,48 @@ footer {
             flex-direction: row;
             .topic-box {
                 border: solid 1px black;
-                padding: 10px 10px 10px 10px;
+                padding: 10px;
                 height: 200px;
                 display: flex;
-                justify-content: center;
+                justify-content: space-between;
                 align-items: center;
+                text-align: center;
                 flex-direction: column;
                 h3 {
                     font-size: 20px;
                     margin-bottom: 10px;
                 }
-                .p{
+                p{
                     font-size: 15px;
-                    margin-bottom: 5px;
+                    margin: 10px 0;
                     cursor: pointer;
                 }
             }
+        }
+    }
+}
+
+.iniciar-sesion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    h2{
+        text-transform: uppercase;
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .inic-ses{
+        height: 200px;
+        width: 400px;
+        button {
+            border: 0.5px solid #ced4da;
+            text-transform: uppercase;
+            background-color: white;
+            margin-top: 30px;
+            border-radius: 5px;
+            width: 400px;
         }
     }
 }
@@ -259,7 +285,21 @@ footer {
     }
 
     .ayuda {
-        height: 250vh;
+        height: 275vh;
+        .help-topic{
+            flex-wrap: wrap;
+            justify-content: space-around;
+            .topic-box {
+                padding: 2px !important;
+                h3{
+                    font-size: 15px;
+                }
+                p {
+                    margin: 0;
+                    font-size: 15px !important;
+                }
+            }
+        }
     }
 
     .product-view1 {
@@ -276,14 +316,6 @@ footer {
 
     .unique {
         height: 100vh;
-    }
-
-    .topic-box h3{
-        font-size: 15px;
-    }
-
-    .topic-box p {
-        font-size: 10px;
     }
 
     footer {
@@ -307,7 +339,21 @@ footer {
     }
 
     .ayuda {
-        height: 250vh;
+        height: 300vh;
+        .help-topic{
+            flex-wrap: wrap;
+            justify-content: space-around;
+            .topic-box {
+                padding: 2px !important;
+                h3{
+                    font-size: 15px;
+                }
+                p {
+                    margin: 0;
+                    font-size: 15px !important;
+                }
+            }
+        }
     }
 
     .product-view1{
@@ -324,14 +370,6 @@ footer {
 
     .unique {
         height: 100vh;
-    }
-
-    .topic-box h3{
-        font-size: 17px;
-    }
-
-    .topic-box p {
-        font-size: 13px;
     }
 
     footer {
@@ -354,7 +392,7 @@ footer {
     }
 
     .ayuda {
-        height: 200vh;
+        height: 300vh;
     }
 
     .product-view1{
@@ -375,5 +413,12 @@ footer {
 
     footer {
         font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+
+    .ayuda {
+        height: 200vh;
     }
 }
